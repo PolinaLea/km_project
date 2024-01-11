@@ -1,0 +1,86 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "Does safety aspects for collaboration can be ensured?",
+           "answers" : ["Yes" , "No"],
+           "goTo" : ["2", "3"]
+         },
+    "2": { "type" : "question",
+           "text" : "Is it existing product or new product?",
+           "answers" : ["Existing" , "New"],
+           "goTo" : ["5", "4"]
+         },
+    "3" : { "type" : "result",
+            "text" : "Chose industrial robot"
+          },
+    "4" : { "type" : "result",
+            "text" : "Provide solutions according to customer preferences"
+          },
+    "5" : { "type" : "question",
+          "text" : "Were humans involved in production in the past (manual tasks and many humans in environment)?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["6", "7"]
+          },
+    "6" : { "type" : "question",
+          "text" : "Calculate safety measure costs",
+          "answers": ["Next"],
+          "goTo" : ["8"]         
+          },
+    "7" : { "type" : "question",
+          "text" : "Is there an open area around robot?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["6", "11"]
+          },    
+
+    "8" : { "type" : "question",
+          "text" : "Is collaborative mode for project feasible?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["9", "10"]
+          },
+    "9" : { "type" : "result",
+          "text" : "Chose collaborative mode"
+          },         
+    "10" : { "type" : "result",
+           "text" : "Chose cooperative mode"
+           },
+     "11" : { "type" : "question",
+            "text" : "Is there a human at nearby working station?",
+            "answers": ["Yes", "No"],
+            "goTo" : ["6", "12"]
+           },                   
+    "12" : { "type" : "question",
+            "text" : "What is an expected  human traffic (transit) partly can be frequently?",
+            "answers": ["High", "Low"],
+            "goTo" : ["6", "13"]
+          }, 
+    "13" : { "type" : "question",
+            "text" : "What is the possibility of expected crossover of critical +1 meter safety zone (critical zone +1 meter)?",
+            "answers": ["High", "Low"],
+            "goTo" : ["6", "14"]     
+          },
+     "14" : { "type" : "question",
+            "text" : "Calculate cycle time options",
+            "answers": ["Next"],
+            "goTo" : ["15"]         
+          },
+    "15" : { "type" : "question",
+            "text" : "What is the required cycle time?",
+            "answers": ["High", "Low"],
+            "goTo" : ["16", "6"]     
+        },
+    "16" : { "type" : "question",
+            "text" : "Is paralell machines possible (space requirements)?",
+            "answers": ["Yes", "No"],
+            "goTo" : ["6", "17"]     
+             },
+    "17" : { "type" : "question",
+            "text" : "Calculate ROI",
+            "answers": ["Next"],
+            "goTo" : ["18"]         
+           },
+    "18" : { "type" : "question",
+           "text" : "Is cobot for project feasible?",
+           "answers": ["Yes", "No"],
+           "goTo" : ["6", "3"]     
+            }
+}

@@ -1,0 +1,43 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "Which quality type error has our deficient product?",
+           "answers" : ["Cracks and Neckings" , "Bumps, Dents, Sink marks, Waviness, Draw Lines"],
+           "goTo" : ["3", "2"]
+         },
+    "2": { "type" : "question",
+         "text" : "What is the severity of error according to quality personel?",
+         "answers" : ["high severity" , "low or acceptable severity"],
+         "goTo" : ["4", "5"]
+          },
+    "3" : { "type" : "result",
+            "text" : "Discard geometry and produce new"
+          },
+    "4" : { "type" : "question",
+            "text" : "Calcuate cost for reworking",
+            "answers" : ["Next"],
+            "goTo" : ["6"]
+          },
+    "5" : { "type" : "question",
+          "text" : "When is the due date?",
+          "answers": ["Less then 1 day (<1 day)", "More or exactly 1 day (>=1 day)"],
+          "goTo" : ["7", "4"]
+          },
+    "6" : { "type" : "question",
+          "text" : "Is the rework more cost effective ?",
+          "answers": ["Yes, rework is cost effective", "No, not cost effective"],
+          "goTo" : ["8", "3"]
+          },
+    "7" : { "type" : "question",
+          "text" : "Is it asthetically important type of product?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["4", "9"]
+          },    
+    "8" : { "type" : "result",
+          "text" : "Rework geometry"
+          },
+    "9" : { "type" : "result",
+            "text" : "Ship geometry with lower quality"
+          }
+         
+}

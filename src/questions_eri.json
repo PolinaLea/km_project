@@ -1,0 +1,55 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "Did new error (uncertain event) took place?",
+           "answers" : ["yes" , "no"],
+           "goTo" : ["3", "2"]
+         },
+    "2": { "type" : "question",
+         "text" : "Is it operator/software error?",
+         "answers" : ["Yes" , "No"],
+         "goTo" : ["5", "6"]
+          },
+    "3" : { "type" : "question",
+            "text" : "Allocate to Error Category D (unknown/uncertain). ",
+            "answers" : ["Next"],
+            "goTo" : ["4"]
+          },
+    "4" : { "type" : "result",
+          "text" : "Reschedule to other line"
+          },
+    "5" : { "type" : "question",
+            "text" : "Allocate to Error Category A (rather simple error).",
+            "answers" : ["Next"],
+            "goTo" : ["7"]
+          },
+    "6" : { "type" : "question",
+          "text" : "Is our error type X(severe) or error type Y (simple)?",
+          "answers": ["Error Y", "Error X"],
+          "goTo" : ["5", "8"]
+          },
+    "7" : { "type" : "result",
+          "text" : "Stop production and wait for maintenance"
+          },
+    "8" : { "type" : "question",
+          "text" : "Do we have multiple errors?",
+          "answers": ["No. only error X", "following Error (multiple)"],
+          "goTo" : ["9", "10"]
+          },    
+    "9" : { "type" : "question",
+            "text" : "Allocate to Error Category B (rather severe error).",
+            "answers" : ["Next"],
+            "goTo" : ["11"]
+          },
+    "10" : { "type" : "question",
+            "text" : "Allocate to Error Category C (multiple errors).",
+            "answers" : ["Next"],
+            "goTo" : ["4"]
+          },
+      "11": { "type" : "question",
+            "text" : "Is our production on the back-up line feasible?",
+            "answers" : ["Yes" , "No"],
+            "goTo" : ["4", "7"]
+            }
+
+      }

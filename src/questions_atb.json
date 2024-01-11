@@ -1,0 +1,175 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "What is the maximum payload? (product+gripper)?",
+           "answers" : ["More then 6 kilogram (>6 kg)", "Less or exactly 6 kilogram (<=6 kg)"],
+           "goTo" : ["3", "2"]          
+         },
+    "2": { "type" : "question",
+            "text" : "What is the maximum reach (system distance to other systems)?",
+            "answers" : ["More then 700 mm (900 mm)", "Less or exactly 700 mm "],
+            "goTo" : ["4", "5"]
+          },
+          
+    "3" : { "type" : "question",
+          "text" : "What is the maximum reach ?",
+          "answers" : ["More then 1100 mm (1300 mm)", "Less or exactly 1100 mm "],
+          "goTo" : ["21", "29"]
+        },
+    "4" : { "type" : "question",
+          "text" : "Choose generic type TM5-900",
+          "answers": ["Next"],
+          "goTo" : ["6"]
+        },
+    "5" : { "type" : "question",
+        "text" : "What is the desired  max speed (depends on required cycle time)?",
+        "answers": ["Desired maximum speed is 1.1 m/s", "Desired maximum speed is 1.4 m/s"],
+        "goTo" : ["13", "4"]
+        },
+    "6" : { "type" : "question",
+        "text" : "Is built-in-vision system required?",
+        "answers": ["Yes", "No"],
+        "goTo" : ["7", "8"]
+        },
+    "7" : { "type" : "question",
+        "text" : "What is the controller weight (Or power supply or robot arm capable length) ?",
+        "answers": ["Controller weight or power supply or robot arm capable length is 13.5 kg OR 100-240VAC OR 3m/12m", 
+        "Controller weight or power supply or robot arm capable length is 14.5 kg OR 22-60 VCB OR 1.5m"],
+        "goTo" : ["9", "10"]
+        },    
+    "8" : { "type" : "result",
+        "text" : "TM5-900 X or TM5M-900X series"
+        },
+     "9" : { "type" : "result",
+  "text" : "TM5-900"
+        },
+    "10" : { "type" : "question",
+            "text" : "Is SEMI S2 certified (safety guidelines)?",
+            "answers": ["Yes", "No"],
+            "goTo" : ["11", "12"]        
+          },           
+    "11" : { "type" : "result",
+    "text" : "TM5M-900 SEMI"
+           },
+    "12" : { "type" : "result",
+    "text" : "TM5M-900"
+          },
+    "13" : { "type" : "question",
+            "text" : "Choose generic type TM5-700",
+            "answers": ["Next"],
+            "goTo" : ["14"]
+            },
+    "14" : { "type" : "question",
+        "text" : "Is built-in-vision system required?",
+        "answers": ["Yes", "No"],
+        "goTo" : ["15", "16"]
+        },
+    "15" : { "type" : "question",
+        "text" : "What is the controller weight (Or power supply or robot arm capable length) ?",
+        "answers": ["Controller weight or power supply or robot arm capable length is 13.5 kg OR 100-240VAC OR 3m/12m", 
+        "Controller weight or power supply or robot arm capable length is 14.5 kg OR 22-60 VCB OR 1.5m"],
+        "goTo" : ["17", "18"]
+        },    
+    "16" : { "type" : "result",
+        "text" : "TM5-700 X or TM5M-700X series"
+        },
+     "17" : { "type" : "result",
+  "text" : "TM5-700"
+        },
+    "18" : { "type" : "question",
+            "text" : "Is SEMI S2 certified (safety guidelines)?",
+            "answers": ["Yes", "No"],
+            "goTo" : ["19", "20"]        
+          },           
+    "19" : { "type" : "result",
+    "text" : "TM5M-700 SEMI"
+           },
+    "20" : { "type" : "result",
+    "text" : "TM5M-700"
+          },
+
+    "21" : { "type" : "question",
+          "text" : "Choose generic type TM14",
+          "answers": ["Next"],
+          "goTo" : ["22"]
+          },
+    "22" : { "type" : "question",
+          "text" : "Is built-in-vision system required?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["23", "24"]
+          },
+      "23" : { "type" : "question",
+          "text" : "What is the controller weight (Or power supply or robot arm capable length) ?",
+          "answers": ["Controller weight or power supply or robot arm capable length is 13.5 kg OR 100-240VAC OR 3m/12m", 
+          "Controller weight or power supply or robot arm capable length is 14.5 kg OR 22-60 VCB OR 1.5m"],
+          "goTo" : ["25", "26"]
+          },    
+      "24" : { "type" : "result",
+          "text" : "TM14 X or TM14M X series"
+          },
+       "25" : { "type" : "result",
+    "text" : "TM14"
+          },
+      "26" : { "type" : "question",
+              "text" : "Is SEMI S2 certified (safety guidelines)?",
+              "answers": ["Yes", "No"],
+              "goTo" : ["27", "28"]        
+            },           
+      "27" : { "type" : "result",
+      "text" : "TM14M SEMI"
+             },
+      "28" : { "type" : "result",
+      "text" : "TM14M"
+            },
+      "29" : { "type" : "question",
+      "text" : "What is the desired  max speed?",
+      "answers": ["Desired maximum speed is more then 1.1 m/s (1.3 m/s)", "Desired maximum speed is less or equal 1.1 m/s"],
+      "goTo" : ["32", "30"]
+      },
+
+      "30" : { "type" : "question",
+      "text" : "what is the required joint 3 range?",
+      "answers": ["Required joint 3 range is more then 163° (166)", "Required joint 3 range is less or equal 163°"],
+      "goTo" : ["21", "31"]
+      },
+      "31" : { "type" : "question",
+      "text" : "What is the required joint 4.5 speed ?",
+      "answers": ["Required joint is more then 150°/s (180)", "Required joint 3 range is less or equal 150°"],
+      "goTo" : ["21", "32"]
+      },
+
+      "32" : { "type" : "question",
+      "text" : "Choose generic type TM12",
+      "answers": ["Next"],
+      "goTo" : ["33"]
+      },
+"33" : { "type" : "question",
+      "text" : "Is built-in-vision system required?",
+      "answers": ["Yes", "No"],
+      "goTo" : ["34", "35"]
+      },
+  "34" : { "type" : "question",
+      "text" : "What is the controller weight (Or power supply or robot arm capable length) ?",
+      "answers": ["Controller weight or power supply or robot arm capable length is 13.5 kg OR 100-240VAC OR 3m/12m", 
+      "Controller weight or power supply or robot arm capable length is 14.5 kg OR 22-60 VCB OR 1.5m"],
+      "goTo" : ["36", "37"]
+      },    
+  "35" : { "type" : "result",
+      "text" : "TM12 X or TM12M X series"
+      },
+
+   "36" : { "type" : "result",
+"text" : "TM12"
+      },
+  "37" : { "type" : "question",
+          "text" : "Is SEMI S2 certified (safety guidelines)?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["38", "39"]        
+        },           
+  "38" : { "type" : "result",
+  "text" : "TM12M SEMI"
+         },
+  "39" : { "type" : "result",
+  "text" : "TM12M"
+        }
+}

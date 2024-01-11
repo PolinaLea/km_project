@@ -1,0 +1,44 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "Is the worker available?",
+           "answers" : ["Yes" , "No"],
+           "goTo" : ["2", "3"]
+         },
+    "2": { "type" : "question",
+         "text" : "Is the medical condition fullfilled?",
+         "answers" : ["Yes" , "No"],
+         "goTo" : ["4", "3"]
+          },
+    "3" : { "type" : "result",
+            "text" : "Dismiss candidate"
+          },
+    "4" : { "type" : "question",
+            "text" : "Doest the worker has experience with the line?",
+            "answers" : ["Yes" , "No"],
+            "goTo" : ["6", "5"]
+          },
+    "5" : { "type" : "question",
+          "text" : "Calculate difficulty of the geometry. What it the difficulty of the geometry?",
+          "answers": ["high", "low"],
+          "goTo" : ["7", "6"]
+          },
+    "6" : { "type" : "question",
+          "text" : "Compare priority of the worker allocation with other allocations to lines. Is there any exception for allocation to line 20?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["3", "9"]
+          },
+    "7" : { "type" : "question",
+          "text" : "What is priority of production of geometry?",
+          "answers": ["Mandatory", "Not mandatory"],
+          "goTo" : ["6", "8"]
+          },    
+    "8" : { "type" : "question",
+            "text" : "What is the due date ?",
+            "answers": ["Less or exactly 1 day (<=1 day)", "More then 1 day (>1 day)"],
+            "goTo" : ["6", "3"]
+          },
+    "9" : { "type" : "result",
+          "text" : "Allocate worker to geometry and line"
+          }          
+}

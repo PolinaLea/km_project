@@ -1,0 +1,60 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "Is there any contact with hazard?",
+           "answers" : ["Yes" , "No"],
+           "goTo" : ["3", "2"]
+         },
+    "2": { "type" : "question",
+           "text" : "Is there any human in safety zone (critical zone +1-1.5 meters) expected?",
+           "answers" : ["Yes" , "No"],
+           "goTo" : ["4", "5"]
+         },
+    "3" : { "type" : "question",
+            "text" : "Risk detected",
+            "answers" : ["Next"],
+            "goTo" : ["11"]
+          },
+    "4" : { "type" : "question",
+            "text" : "Is there a human in reach zone (cricial zone) expected?",
+            "answers" : ["Yes" , "No"],
+            "goTo" : ["6", "5"]            
+          },
+    "5" : { "type" : "result",
+          "text" : "No risk detected"
+          },
+    "6" : { "type" : "question",
+          "text" : "Is there expected body interaction (hight of robot working vs human size)?",
+          "answers" : ["Neck-pelvis" , "Head"],
+          "goTo" : ["7", "3"]   
+          },
+    "7" : { "type" : "question",
+          "text" : "What is the type of interaction?",
+          "answers": ["Static contact (>5 seconds)", "Transient contact (<=5 seconds)"],
+          "goTo" : ["8", "9"]
+          },    
+    "8" : { "type" : "question",
+          "text" : "Is the maximum actual static pressure or force level exceeded?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["3", "10"]
+          },     
+
+    "9" : { "type" : "question",
+            "text" : "Is force and pressure treshold (2) m/s?",
+            "answers": ["Yes below", "No, above"],
+            "goTo" : ["10", "3"]
+          },     
+    "10" : { "type" : "question",
+            "text" : "Potential risk detected",
+            "answers" : ["Next"],
+            "goTo" : ["12"]
+           },
+    "11" : { "type" : "result",
+             "text" : "Propose risk limiting reduction strategies (less force, less weight...)"
+           },
+    "12" : { "type" : "result",
+             "text" : "Warning, that further measures for safety might be necessary"
+           }
+
+
+}

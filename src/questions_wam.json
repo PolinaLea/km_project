@@ -1,0 +1,44 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "What is the due date of understaffed line?",
+           "answers" : ["high priority" , "low priority"],
+           "goTo" : ["2", "3"]
+         },
+    "2": { "type" : "question",
+         "text" : "Is the worker available?",
+         "answers" : ["Yes" , "No"],
+         "goTo" : ["4", "3"]
+          },
+    "3" : { "type" : "result",
+            "text" : "Dismiss rescheduling"
+          },
+    "4" : { "type" : "question",
+            "text" : "Is the worker completed prior (8 hours) shift?",
+            "answers" : ["Yes" , "No"],
+            "goTo" : ["3", "5"]
+          },
+    "5" : { "type" : "question",
+          "text" : "What is the delivery date of order at current allocated line?",
+          "answers": ["Less then 1 day (<1 day)", "More or exactly 1 day (>=1 day)"],
+          "goTo" : ["3", "6"]
+          },
+    "6" : { "type" : "question",
+          "text" : "Did our worker get the training for this machine?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["7", "3"]
+          },
+    "7" : { "type" : "question",
+          "text" : "Are any operators of level 1 available?",
+          "answers": ["Yes", "No, higher level (engineer or maintenance)"],
+          "goTo" : ["9", "8"]
+          },    
+    "8" : { "type" : "question",
+          "text" : "Do we have the acceptance of an employee for lower level task?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["9", "3"]
+          },
+    "9" : { "type" : "result",
+          "text" : "Reschedule worker"
+          }          
+}

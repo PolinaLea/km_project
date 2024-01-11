@@ -1,0 +1,26 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "Is raw material quantity for order available for geometry X?",
+           "answers" : ["Yes" , "No"],
+           "goTo" : ["2", "3"]
+         },
+    "2": { "type" : "question",
+         "text" : "Do we have a requiered container available for Geometry X?",
+         "answers" : ["Yes" , "No"],
+         "goTo" : ["4", "3"]
+          },
+    "3" : { "type" : "result",
+            "text" : "Reschedule production to next geometry"
+          },
+
+    "4" : { "type" : "question",
+            "text" : "Is our production line capacity available (or backup line)?",
+            "answers" : ["Yes" , "No"],
+            "goTo" : ["5", "3"]
+          },
+
+    "5" : { "type" : "result",
+          "text" : "Scheduale production of geometry (minimum amount of customer (richiesta))."
+          }          
+}

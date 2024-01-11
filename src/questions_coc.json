@@ -1,0 +1,38 @@
+
+{
+    "1": { "type" : "question",
+           "text" : "Does container efficiency parameter of all geometries of order fulfilled?",
+           "answers" : ["Yes" , "No"],
+           "goTo" : ["2", "3"]
+         },
+    "2": { "type" : "question",
+           "text" : "Add containers to truck. Is truck saturation acceptable?",
+           "answers" : ["Yes (high)" , "No, low or free space"],
+           "goTo" : ["4", "5"]
+         },
+    "3" : { "type" : "result",
+            "text" : "Postpone shipping"
+          },
+    "4" : { "type" : "result",
+            "text" : "Shipping"
+          },
+    "5" : { "type" : "question",
+          "text" : "Is the saturation of other truck types higher?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["6", "7"]
+          },
+    "6" : { "type" : "result",
+          "text" : "Choose other truck type and ship"
+          },
+    "7" : { "type" : "question",
+          "text" : "Is additional geometry possible to ship in truck?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["4", "8"]
+          },    
+    "8" : { "type" : "question",
+          "text" : "Is customer consent received to ship 1 day later?",
+          "answers": ["Yes", "No"],
+          "goTo" : ["3", "4"]
+          }     
+
+}
