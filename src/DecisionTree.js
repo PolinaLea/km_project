@@ -15,7 +15,7 @@ export default function DecisionTree(props) {
     padding: '10px',  // Padding inside the container
   };
 
-  ReactGA.pageview(props.title);
+  ReactGA.send({ hitType: "pageview", path: "/" , title: props.title })
 
   const buttonStyle = {
     margin: '0 5px', // Adds horizontal space between buttons
