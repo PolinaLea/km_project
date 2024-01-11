@@ -1,9 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import * as React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Decision from './Decision';
-import Button from '@mui/material/Button';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import StartPage from './StartPage';
 import DecisionTree from './DecisionTree';
 import questions_coc from './questions_coc.json';
@@ -17,23 +15,9 @@ import questions_qee from './questions_qee.json';
 import questions_eri from './questions_eri.json';
 import WorkerAllocation from './WorkerAllocation';
 import ErrorRiskIdentEval from './ErrorRiskIdentEval';
-import ATB_main from './ATB_main';
+import AtbMain from './AtbMain';
 
 function App() {
-  const containerStyle = {
-    display: 'flex',   // Enables flexbox
-    flexDirection: 'row',  // Aligns children in a row
-    justifyContent: 'center',  // Centers the buttons in the container
-    alignItems: 'center', // Centers the buttons vertically (if needed)
-    padding: '10px',  // Padding inside the container
-    // Add more container styling as needed
-  };
-
-  const buttonStyle = {
-    margin: '0 5px', // Adds horizontal space between buttons
-    // Add more button styling as needed
-  };
-
     return (
     <div className="App">
         <header className="App-header">
@@ -45,7 +29,7 @@ function App() {
                     <Route path="/custom_order_completion" element={<DecisionTree data={questions_coc} title="Custom Order Completion" />} />
                     <Route path="/worker_allocation" element={<WorkerAllocation />} />
                     <Route path="/error_identification_main" element={<ErrorRiskIdentEval/>} />                    
-                    <Route path="/automated_test_building" element={<ATB_main/>} />
+                    <Route path="/automated_test_building" element={<AtbMain/>} />
                     <Route path="/automated_test_building_robot_requirements" element={<DecisionTree data={questions_atb} title="Automated Test Building - Robot Requirements" />} />
                     <Route path="/automated_test_building_robot_risk_assessment" element={<DecisionTree data={questions_atbra} title="Automated Test Building - Risk assessment" />} />
                     <Route path="/automated_test_building_robot_human_robot_interaction" element={<DecisionTree data={questions_atbhr} title=" Automated Test Building - Human-Robot Interaction" />} />

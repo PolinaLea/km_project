@@ -39,17 +39,17 @@ export default function StartPage() {
             <div>
             <div style={horizontalStyle}>
                 <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/custom_order_completion")}>
-                <img src="/custom_order_completion_logo.png" alt="Custom Order Completion Image" style={imageStyle} /> Custom Order Completion</Button>
+                <img src="/custom_order_completion_logo.png" alt="Custom Order Completion" style={imageStyle} /> Custom Order Completion</Button>
             <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/worker_allocation")}>
-                <img src="/worker_allocation_main.png" alt="Worker allocation main Image" style={imageStyle} />Worker Allocation</Button>
+                <img src="/worker_allocation_main.png" alt="Worker allocation main" style={imageStyle} />Worker Allocation</Button>
 
             <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/error_identification_main")}>
-            <img src="/error_iden_eval_main.png" alt="Error_iden_eval main Image" style={imageStyle} />Error Identification and Evaluation</Button>
+            <img src="/error_iden_eval_main.png" alt="Error_iden_eval main" style={imageStyle} />Error Identification and Evaluation</Button>
 
             <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/automated_test_building")}>
             <img src="/automated_test_building_main.png" alt="Automated test building main Image" style={imageStyle} />Automated Test Building</Button> 
             <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/production_reschedule")}>
-            <img src="/producton_re.png" alt="Worker allocation main Image" style={imageStyle} />Production reschedule</Button>
+            <img src="/producton_re.png" alt="Worker allocation main" style={imageStyle} />Production reschedule</Button>
             </div>
             </div>
    );

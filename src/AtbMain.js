@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-export default function ATB_main() {
+export default function AtbMain() {
     const horizontalStyle = {
         display: 'flex',   // Enables flexbox
         flexDirection: 'row',  // Aligns children in a row
@@ -39,11 +39,11 @@ export default function ATB_main() {
             <div>
             <div style={horizontalStyle}>
                 <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/automated_test_building_robot_requirements")}>
-                <img src="/automated_test_building_robot__requirement.png" alt="Automated Test Building Robot requirements Image" style={imageStyle} /> Automated Test Building - Robot Requirements </Button>
+                <img src="/automated_test_building_robot__requirement.png" alt="Automated Test Building Robot requirements" style={imageStyle} /> Automated Test Building - Robot Requirements </Button>
             <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/automated_test_building_robot_risk_assessment")}>
             <img src="/automated_test_building_risk_assessment.png" alt="Automated Test Building Risk assessment" style={imageStyle} />Automated Test Building - Risk assessment</Button>
             <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/automated_test_building_robot_human_robot_interaction")}>
-                <img src="/automated_test_building_human_robot.png" alt="Automated Test Building Human Robot Image" style={imageStyle} /> Automated Test Building - Human-Robot Interaction </Button>
+                <img src="/automated_test_building_human_robot.png" alt="Automated Test Building Human Robot" style={imageStyle} /> Automated Test Building - Human-Robot Interaction </Button>
             </div>
                 <Button variant="contained" style={buttonStyle} href="/">
                     Restart
