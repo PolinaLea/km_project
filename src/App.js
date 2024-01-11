@@ -16,10 +16,8 @@ import questions_eri from './questions_eri.json';
 import WorkerAllocation from './WorkerAllocation';
 import ErrorRiskIdentEval from './ErrorRiskIdentEval';
 import AtbMain from './AtbMain';
-import ReactGA from "react-ga4";
 
 function App() {
-    ReactGA.initialize("G-Q3E8RCHB55");
     return (
     <div className="App">
         <header className="App-header">
