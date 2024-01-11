@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Decision from './Decision';
 import Result from './Result';
 import * as globals from './global.js';
+import ReactGA from "react-ga4";
 
 export default function DecisionTree(props) {
     const containerStyle = {
@@ -14,6 +15,7 @@ export default function DecisionTree(props) {
     padding: '10px',  // Padding inside the container
   };
 
+  ReactGA.pageview(props.title);
 
   const buttonStyle = {
     margin: '0 5px', // Adds horizontal space between buttons
