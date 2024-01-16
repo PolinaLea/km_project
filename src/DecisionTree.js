@@ -1,4 +1,6 @@
+/* DecisionTree.js */
 
+import './App.css';
 import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import Decision from './Decision';
@@ -7,16 +9,17 @@ import * as globals from './global.js';
 
 export default function DecisionTree(props) {
     const containerStyle = {
-    display: 'flex',   // Enables flexbox
-    flexDirection: 'row',  // Aligns children in a row
-    justifyContent: 'center',  // Centers the buttons in the container
-    alignItems: 'center', // Centers the buttons vertically (if needed)
-    padding: '10px',  // Padding inside the container
+    display: 'flex', 
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignItems: 'center',
+    padding: '10px',
+    gap: '10px'
+    
   };
 
-  const buttonStyle = {
-    margin: '0 5px', // Adds horizontal space between buttons
-  };
+
+
     const [activeQuestion, setActiveQuestion] = useState(globals.getActiveQuestion());
     const [havePreviousQuestion, setHavePreviousQuestion] = useState(globals.havePreviousQuestion());
 
@@ -34,12 +37,16 @@ export default function DecisionTree(props) {
             { props.data[activeQuestion].type === 'question' && <Decision data={props.data} /> }
             { props.data[activeQuestion].type === 'result' && <Result data={props.data} /> }
             <div style={containerStyle}>
-                <Button variant="contained" style={buttonStyle}
+                <br></br>
+                <br></br>
+                <br></br>
+                <Button className="button-neu"
                         onClick={() => globals.setPreviousQuestion() }
                         disabled={!havePreviousQuestion}>
                     Back
                 </Button>
-                <Button variant="contained" style={buttonStyle} href="/">
+                <br></br>
+                <Button className="button-neu" href="/">
                     Restart
                 </Button>
             </div>

@@ -12,6 +12,7 @@ export default function ErrorRiskIdentEval() {
         justifyContent: 'center',  // Centers the buttons in the container
         alignItems: 'center', // Centers the buttons vertically (if needed)
         padding: '10px',  // Padding inside the container
+        gap: '40px'
     };
 
     const navigate = useNavigate();
@@ -21,33 +22,33 @@ export default function ErrorRiskIdentEval() {
         navigate(link);
     }
 
-    const buttonStyle = {
-        margin: '0 10px', 
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center'
-    };
+   
     
-    const imageStyle = {
-        width: '100px', // adjust as needed
-        height: '100px', // adjust as needed
-        marginBottom: '10px', // space between image and text
-    };
 
-    return (
-            <div>
-            <div style={horizontalStyle}>
-                <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/quality_error_evaluation")}>
-                <img src="/quality_error_eval.png" alt="Quality Error Evaluation Image" style={imageStyle} /> Quality error evaluation</Button>
-            <Button variant="contained" style={buttonStyle} onClick={() => gotoLink("/error_identification")}>
-            <img src="/error_ident.png" alt="Error identification Image" style={imageStyle} />Error Identification</Button>
 
+    return     <div className="button-container">
+    
+            <Button className="button-neu"  onClick={() => gotoLink("/quality_error_evaluation")}>
+                    Quality error evaluation
+            </Button>
+            <Button className="button-neu"  onClick={() => gotoLink("/error_identification")}>
+                    Error Identification
+            </Button>
+            <br>
+            </br>
+            <Button className="button-neu" href="/">
+            Restart
+            </Button>
             </div>
-            <Button variant="contained" style={buttonStyle} href="/">
-                    Restart
-                </Button>
-            </div>
-   );
+
+
+
+
+
+
+
+
+
+
 }
 

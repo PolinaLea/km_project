@@ -9,11 +9,9 @@ const ChatbotComponent = () => {
     const chatbotStyle = {
         position: 'fixed',
         right: '0px',
-        top: '10px',
-        width: '300px',
-        height: '500px',
+        top: '20%',
+        width: '310px',
         zIndex: 1000,
-        // add more styling as needed
     };
     return (
         <div style={chatbotStyle}>

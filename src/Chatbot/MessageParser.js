@@ -1,3 +1,5 @@
+/*MessageParser.js*/
+
 import React from 'react';
 
 const MessageParser = ({ children, actions }) => {

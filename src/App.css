@@ -1,39 +1,68 @@
-.App {
-  text-align: center;
+/* App.css */
+
+.app-container {
+  display: flex;
+  height: 100vh; /* Stellt sicher, dass der App-Container die volle Bildschirmhöhe einnimmt */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-container {
+  flex-basis: 75%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%; /* Füllt die gesamte Höhe des übergeordneten Containers aus */
+}
+
+.header-container {
+  flex-basis: 20%;
+  background-color: #2898EC;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
-  /* color: #f5f5f5; */
+.button-container {
+  flex-grow: 1; /* Lässt den Button-Container den verfügbaren Platz einnehmen */
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  overflow: auto; /* Fügt Scrollbars hinzu, falls der Inhalt überläuft */
+  background-color: #f2eded;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.right-container {
+  flex-basis: 25%;
+  display: flex; /* Stellen Sie sicher, dass flex verwendet wird */
+  flex-direction: column; /* Kinder sollen vertikal gestapelt werden */
+  justify-content: stretch; /* Strecken Sie die Kinder, um den Container zu füllen */
+  align-items: stretch; /* Strecken Sie die Kinder auch horizontal */
+  background-color: #CACACE;
+  height: 100%; /* Füllt die gesamte Höhe des übergeordneten Containers aus */
 }
+
+
+.button-neu {
+  border: none;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #ffffff;
+  padding: 10px 20px;
+  margin-right: 50px;
+  transition: box-shadow 0.3s ease-in-out;
+  height: 65px;
+  width: 300px;
+  gap: '40px'
+}
+
+.button-neu:hover {
+  box-shadow: none;
+}
+
+.button-neu:active {
+  box-shadow: inset 6px 6px 12px #b8b9be, inset -6px -6px 12px #ffffff;
+}
+
+
+

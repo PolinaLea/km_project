@@ -1,3 +1,4 @@
+/*global.js*/
 
 import questions_coc from './questions_coc.json';
 import questions_prr from './questions_prr.json';

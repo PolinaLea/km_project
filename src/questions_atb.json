@@ -1,5 +1,6 @@
-
 {
+
+    
     "1": { "type" : "question",
            "text" : "What is the maximum payload? (product+gripper)?",
            "answers" : ["More then 6 kilogram (>6 kg)", "Less or exactly 6 kilogram (<=6 kg)"],
